@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" /> 
+</head>
+
+<header>
+  <a href ="{% url 'homepage' %}">Home</a>
+  <a href ="{% url 'about' %}">About</a>
+  <a href ="{% url 'blog' %}">Blog</a>
+</header>
+
+
+
+
+<body>
+
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

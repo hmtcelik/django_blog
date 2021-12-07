@@ -1,0 +1,14 @@
+{% extends 'nav.html' %}
+
+{% block content %}
+
+{% for post in all_objects %}
+
+<ul>
+    <li><a href="{% url 'post' post.id %}">{{ post.post_title }}</a></li>
+</ul>
+
+{% endfor %}
+{% endblock %}
+
+
