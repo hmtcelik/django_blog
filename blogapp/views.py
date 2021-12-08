@@ -1,8 +1,8 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView , DetailView
 from .models import Post
 
 
-class BlogView(TemplateView):
+class BlogView(ListView):
     template_name = 'blog.html'
     context_object_name = 'all_posts'
     model = Post
@@ -10,7 +10,7 @@ class BlogView(TemplateView):
     def get_queryset(self):
         return Post.objects.all()
     
-class PostView(TemplateView):
+class PostView(DetailView):
     template_name = 'post.html'
     model = Post
     

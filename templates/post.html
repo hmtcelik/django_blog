@@ -1,1 +1,16 @@
-hi
+{% extends 'nav.html' %}
+
+
+{% block content %}
+
+
+<h1>{{ post.title }}</h1>
+
+<h3>{{ post.author }}</h3>
+
+<h5>{{ post.pub_date }}</h5>
+
+<a>{{ post.text }}</a>
+
+
+{% endblock %}
