@@ -2,13 +2,12 @@
 
 {% block content %}
 
-{% for post in all_objects %}
+{% for post in all_posts %}
 
-<ul>
-    <li><a href="{% url 'post' post.id %}">{{ post.post_title }}</a></li>
-</ul>
+    <h1><a href="{% url 'post' post.id %}">{{ post.title }}</a></h1>
 
 {% endfor %}
+
 {% endblock %}
 
 
