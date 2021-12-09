@@ -6,11 +6,20 @@
 
 {% block content %}
 
-{% for post in all_posts %}
+    {% for post in all_posts %}
 
-    <h1><a href="{% url 'post' post.id %}">{{ post.title }}</a></h1>
+    <div class="m-4">
+        <div class="card" style="width: 60%; margin: auto;">
+            <img src="#" class="card-img-top" alt="Sample Image">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">{{ post.text|truncatewords:20 }}</p>
+                    <a href="{% url 'post' post.id %}" class="btn btn-primary">Read More</a>
+                </div>
+        </div>
+    </div>
 
-{% endfor %}
+    {% endfor %}
 
 {% endblock %}
 
