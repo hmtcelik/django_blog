@@ -3,22 +3,22 @@
 {% block title %}Blog{% endblock %}
 
 
-
 {% block content %}
 
     {% for post in all_posts %}
-
-    <div class="m-4">
-        <div class="card" style="width: 60%; margin: auto;">
-            <img src="#" class="card-img-top" alt="Sample Image">
-                <div class="card-body text-center">
-                    <h5 class="card-title">{{ post.title }}</h5>
-                    <p class="card-text">{{ post.text|truncatewords:20 }}</p>
-                    <a href="{% url 'post' post.id %}" class="btn btn-primary">Read More</a>
-                </div>
+    <div class="row">
+        <div class="m-4">
+            <div class="card" style="width: 50%; margin: auto;">
+                    <img src="{{ post.post_image.url }}" class="card-img-top" alt="-">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text">{{ post.text|truncatewords:20 }}</p>
+                        <a href="{% url 'post' post.id %}" class="btn btn-primary">Read More</a>
+                    </div>
+            </div>
         </div>
+        
     </div>
-
     {% endfor %}
 
 {% endblock %}

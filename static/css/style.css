@@ -3,4 +3,9 @@ body {
     background-image: url(/static/images/bk.png);   
   }
 
-
+/*Bootstrap card*/
+.card {
+  width: auto; 
+  height: auto;
+  margin: auto;
+}
