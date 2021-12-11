@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
 
-{% block title %}<div class = "container-fluid">{{ post.title }}{% endblock %}</div>
+{% block title %}{{ post.title }}{% endblock %}</div>
 
 
 {% block content %}
 
 <div class="m-3">
     <div class = "container-fluid">
+        <img src="{{ post.post_image.url }}" alt="-" style="width: 40%; height: 40%;">
+        <br><br>
 
         <h1>{{ post.title }}</h1>
 
