@@ -7,8 +7,10 @@
 {% block content %}
 
 <div class="m-3">
+    
     <div class = "container-fluid">
-        <img src="{{ post.post_image.url }}" alt="-" style="width: 40%; height: 40%;">
+        <div class="text-center">
+        <img src="{{ post.post_image.url }}" alt="-" style="width: 50%; height: 50%;">
         <br><br>
 
         <h1>{{ post.title }}</h1>
@@ -16,9 +18,13 @@
         <h3>{{ post.author }}</h3>
 
         <h5>{{ post.pub_date }}</h5>
-
-         <a>{{ post.text }}</a>
+        <br>
     </div>
+         <a>{{ post.text }}</a>
+        </div>
+        <br>
+        <br>
+    
 </div>
 
 {% endblock %}

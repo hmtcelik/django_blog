@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView, ListView , DetailView
+from django.views.generic import TemplateView, ListView , DetailView, CreateView
 from .models import Post
 
 
@@ -13,4 +13,9 @@ class BlogView(ListView):
 class PostView(DetailView):
     template_name = 'post.html'
     model = Post
+    
+class PostCreateView(CreateView):
+    model = Post
+    template_name = "post_new.html"
+    fields = ["title", "author", "text", "pub_date", "post_image"]
     
