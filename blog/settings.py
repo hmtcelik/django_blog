@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "aboutpage.apps.AboutpageConfig",
     "blogapp.apps.BlogappConfig",
     'crispy_forms',
+    'tinymce',
 
 ]
 

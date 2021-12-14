@@ -20,7 +20,7 @@
                     <img src="{{ post.post_image.url }}" class="card-img-top" alt="-">
                     <div class="card-body text-center">
                         <h5 class="card-title">{{ post.title }}</h5>
-                        <p class="card-text">{{ post.text|truncatewords:30 }}</p>
+                        <p class="card-text">{{ post.text|truncatewords:30|safe }}</p>
                         <a href="{% url 'post' post.id %}" class="btn btn-primary">Read More</a>
                     </div>
             </div>

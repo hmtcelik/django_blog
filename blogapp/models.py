@@ -1,11 +1,13 @@
 from django.db import models
 from django.urls import reverse
+from tinymce.models import HTMLField
+
 
 
 class Post(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=50)
-    text = models.TextField()
+    text = HTMLField()
     pub_date = models.CharField(max_length=20, default='01.01.2021')
     post_image = models.ImageField(upload_to="static/uploads", default="-")
     

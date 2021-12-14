@@ -17,5 +17,5 @@ class PostView(DetailView):
 class PostCreateView(CreateView):
     model = Post
     template_name = "post_new.html"
-    fields = ["title", "author", "text", "pub_date", "post_image"]
+    fields = '__all__'
     
