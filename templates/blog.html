@@ -4,7 +4,8 @@
 
 
 {% block content %}
-
+    
+    {% if user.is_authenticated %}
     <header>
         <div class="m-1 ">
             <div class="text-end">
@@ -12,6 +13,8 @@
             </div>
         </div>     
     </header>
+    {% else %}
+    {% endif %}
 
     {% for post in all_posts %}
     <div class="row">
